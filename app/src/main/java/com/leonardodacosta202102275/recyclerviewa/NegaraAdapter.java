@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class NegaraAdapter extends RecyclerView.Adapter<NegaraViewHolder>
@@ -32,11 +34,20 @@ public class NegaraAdapter extends RecyclerView.Adapter<NegaraViewHolder>
     @Override
     public void onBindViewHolder(@NonNull NegaraViewHolder holder, int position) {
         NegaraModel nm = _negaraModelList.get(position);
-        
+        Picasso.with(_context).load(nm.getUrl()).into(holder._imageView1);
+        holder._namaTextView.setText(nm.getNama());
+        holder._deskripsiTextView.setText(nm.getDeskripsi());
     }
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public int getItemCount()
+    {
+        int itemCount = 0;
+
+        if (_negaraModelList != null)
+        {
+            itemCount = _negaraModelList.size();
+        }
+        return itemCount;
     }
 }
