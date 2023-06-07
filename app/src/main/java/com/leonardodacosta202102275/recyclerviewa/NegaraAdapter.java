@@ -17,7 +17,7 @@ public class NegaraAdapter extends RecyclerView.Adapter<NegaraViewHolder>
     private Context _context;
     private List<NegaraModel> _negaraModelList;
 
-    public NegaraAdapter (Context context, List<NegaraModel> NegaraModelList)
+    public NegaraAdapter (Context context, List<NegaraModel> negaraModelList)
     {
         this._context = context;
         this._negaraModelList = negaraModelList;
