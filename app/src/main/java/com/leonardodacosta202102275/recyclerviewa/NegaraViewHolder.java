@@ -17,7 +17,7 @@ public class NegaraViewHolder extends RecyclerView.ViewHolder
         super(itemView);
 
         _imageView1 = (ImageView)itemView.findViewById(R.id.imageView1);
-        _namaTextView = (TextView)itemView.findViewById(R.id.deskripsiTextView);
+         _namaTextView= (TextView)itemView.findViewById(R.id.deskripsiTextView);
         _deskripsiTextView = (TextView) itemView.findViewById(R.id.deskripsiTextView);
     }
 }
